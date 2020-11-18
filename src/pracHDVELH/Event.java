@@ -17,55 +17,64 @@ public class Event extends NodeMultiple {
 	public static final String ERROR_MSG_UNEXPECTED_END = "Sorry, for some unexpected reason the story ends here...";
 	public static final String PROMPT_ANSWER = "Answer: ";
 	public static final String WARNING_MSG_INTEGER_EXPECTED = "Please input a integer within range!";
+	private String playerAnswer;
+	private Scanner reader;
+	private int chosenPath;
+	private String data;
 
 	/**
 	 * @return the playerAnswer
 	 */
-	public String getPlayerAnswer() {
-		/* TO BE COMPLETED */
+	public String getPlayerAnswer() 
+	{
+		return playerAnswer;
 	}
 
 	/**
 	 * @param playerAnswer the playerAnswer to set
 	 */
-	public void setPlayerAnswer(String playerAnswer) {
-		/* TO BE COMPLETED */
+	public void setPlayerAnswer(String playerAnswer) 
+	{
+		this.playerAnswer = playerAnswer;
 	}
 
 	/**
 	 * @return the reader
 	 */
 	public Scanner getReader() {
-		/* TO BE COMPLETED */
+		return reader;
 	}
 
 	/**
 	 * @param reader the reader to set
 	 */
-	public void setReader(Scanner reader) {
-		/* TO BE COMPLETED */
+	public void setReader(Scanner reader) 
+	{
+		this.reader = reader;
 	}
 
 	/**
 	 * @return the chosenPath
 	 */
 	public int getChosenPath() {
-		/* TO BE COMPLETED */
+		return chosenPath;
 	}
 
 	/**
 	 * @param chosenPath the chosenPath to set
 	 */
-	public void setChosenPath(int chosenPath) {
-		/* TO BE COMPLETED */
+	public void setChosenPath(int chosenPath) 
+	{
+		this.chosenPath = chosenPath;
 	}
 
 	/* Methods */
 	/**
 	 * @see pracHDVELH.NodeMultiple#getData()
 	 */
-	public String getData() {
-		/* TO BE COMPLETED */
+	public String getData() 
+	{
+		return data;
 	}
 
 	/**
@@ -73,15 +82,16 @@ public class Event extends NodeMultiple {
 	 * @param data
 	 */
 	public void setData(String data) {
-		/* TO BE COMPLETED */
+		this.data = data;
 	}
 
 	/**
 	 * @see pracHDVELH.NodeMultiple#getDaughter(int)
 	 */
 	@Override
-	public Event getDaughter(int i) {
-		/* TO BE COMPLETED */
+	public Event getDaughter(int i) 
+	{
+		
 	}
 
 	/**
@@ -89,8 +99,9 @@ public class Event extends NodeMultiple {
 	 * @param daughter
 	 * @param i
 	 */
-	public void setDaughter(Event daughter, int i) {
-		/* TO BE COMPLETED */
+	public void setDaughter(Event daughter, int i) 
+	{
+		Pair
 	}
 
 	/**

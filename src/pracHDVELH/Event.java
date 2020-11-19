@@ -148,10 +148,13 @@ public class Event extends NodeMultiple {
 	}
 
 	/* Methods */
-	public void run()
+	public Event run()
 	{
-		
-	}
+		gui.outputln(getData());
+		gui.output(PROMPT_ANSWER);
+		playerAnswer = reader.next();
+		chosenPath = InterpretAnswer();
+		return getDaughter(chosenPath);
 	}
 }
 

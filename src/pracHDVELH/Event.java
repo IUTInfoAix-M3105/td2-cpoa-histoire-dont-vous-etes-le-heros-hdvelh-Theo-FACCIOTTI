@@ -17,10 +17,26 @@ public class Event extends NodeMultiple {
 	public static final String ERROR_MSG_UNEXPECTED_END = "Sorry, for some unexpected reason the story ends here...";
 	public static final String PROMPT_ANSWER = "Answer: ";
 	public static final String WARNING_MSG_INTEGER_EXPECTED = "Please input a integer within range!";
+	private int id;
 	private String playerAnswer;
-	private Scanner reader;
 	private int chosenPath;
-	private String data;
+	private GUIManager gui;
+	private Scanner reader;
+	static private int lastId = -1;
+
+	/** Constructor */
+	public Event() 
+	{}
+
+	public Event(GUIManager gui, String data)
+	{
+		super(data);
+		this.gui = gui;
+		reader = gui.getInputReader();
+		id = ++lastId;
+		chosenPath = -1;
+		playerAnswer = ERROR_MSG_UNEXPECTED_END;
+	}
 
 	/**
 	 * @return the playerAnswer
@@ -41,7 +57,8 @@ public class Event extends NodeMultiple {
 	/**
 	 * @return the reader
 	 */
-	public Scanner getReader() {
+	public Scanner getReader() 
+	{
 		return reader;
 	}
 
@@ -56,7 +73,8 @@ public class Event extends NodeMultiple {
 	/**
 	 * @return the chosenPath
 	 */
-	public int getChosenPath() {
+	public int getChosenPath() 
+	{
 		return chosenPath;
 	}
 
@@ -74,15 +92,16 @@ public class Event extends NodeMultiple {
 	 */
 	public String getData() 
 	{
-		return data;
+		return this.toString();
 	}
 
 	/**
 	 * @see pracHDVELH.NodeMultiple#setData(Object)
 	 * @param data
 	 */
-	public void setData(String data) {
-		this.data = data;
+	public void setData(String data) 
+	{
+		this.setData(data);
 	}
 
 	/**
@@ -101,32 +120,38 @@ public class Event extends NodeMultiple {
 	 */
 	public void setDaughter(Event daughter, int i) 
 	{
-		Pair
+		
 	}
 
 	/**
 	 * @return the gui
 	 */
-	public GUIManager getGui() {
+	public GUIManager getGui() 
+	{
 		/* TO BE COMPLETED */
 	}
 
 	/**
 	 * @param gui the gui to set
 	 */
-	public void setGui(GUIManager gui) {
+	public void setGui(GUIManager gui) 
+	{
 		/* TO BE COMPLETED */
 	}
 
 	/**
 	 * @return the id
 	 */
-	public int getId() {
+	public int getId() 
+	{
 		/* TO BE COMPLETED */
 	}
 
 	/* Methods */
-	/* TO BE COMPLETED */
+	public void run()
+	{
+		
+	}
 	}
 }
 
